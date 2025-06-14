@@ -11,8 +11,8 @@ Access to the GitHub repo with Terraform files.
 
 # Step-by-Step Instructions
 ## 1. Clone the Repository
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/piyush-c04/terraform-stockserver>.git
+cd src
 ## 2. Create Your Own terraform.tfvars File
 cp terraform.tfvars.example terraform.tfvars
 Edit the terraform.tfvars file with your specific values:
