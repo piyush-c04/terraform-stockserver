@@ -1,5 +1,3 @@
-cloud watch
-sns 
 sqs
 batch
 websocket gateway
