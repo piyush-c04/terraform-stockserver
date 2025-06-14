@@ -36,3 +36,13 @@ resource "aws_iam_role_policy_attachment" "transformer_dynamodb" {
   role       = module.lambda.transformer_role_arn
   policy_arn = module.dynamodb.lambda_policy_arn
 }
+
+module "cloudwatch_monitoring" {
+  source = "./modules/cloudwatch"
+
+  sns_topic_arn       = aws_sns_topic.alerts.arn
+  kinesis_stream_name = module.kinesis.name
+  batch_job_queue     = module.batch.job_queue_name
+  dynamodb_table_name = module.dynamodb.table_name
+  asg_name           = module.autoscaling.asg_name
+}
